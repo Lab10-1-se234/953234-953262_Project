@@ -1,7 +1,6 @@
 version : '3'
 services :
-  server :
-    build: .
+  frontend :
     image: sodaop/finalproject:latest
     ports:
       - "8117:8080"
