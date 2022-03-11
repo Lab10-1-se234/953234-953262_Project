@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-require("dotenv").config();
+
 
 const shopRoutes = require('./routes/shop');
 
@@ -23,5 +23,6 @@ app.use((req, res, next) => {
     
 });
 
-const PORT = process.env.NODE_DOCKER_PORT || 8080;
-app.listen(PORT);
+const PORT = 8117;
+const HOST = "3.212.189.164";
+app.listen(PORT,HOST);

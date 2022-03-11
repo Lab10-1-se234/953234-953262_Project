@@ -1,9 +1,14 @@
-version: '3.8'
+version: '3.9'
+ 
 services:
-  app:
-    build: ./app
-    restart: unless-stopped
-    env_file: ./.env
+    
+  server: 
+    container_name: finalproduct
+    build: 
+      dockerfile: Dockerfile
     ports:
-      - 8117:80
-   
+       - 8117:8080
+
+  
+     
+      
