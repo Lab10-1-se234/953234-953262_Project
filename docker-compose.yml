@@ -4,7 +4,7 @@ services:
   server: 
     container_name: finalproduct
     build: 
-      dockerfile: Dockerfile
+    image: sodaop/finalproject:latest
     ports:
        - 8117:8080
 
