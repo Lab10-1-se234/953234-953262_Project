@@ -1,6 +1,9 @@
-version : '3'
-services :
-  frontend :
-    image: sodaop/finalproject:latest
+version: '3.8'
+services:
+  app:
+    build: ./app
+    restart: unless-stopped
+    env_file: ./.env
     ports:
-      - "8117:8080"
+      - 8117:80
+   
