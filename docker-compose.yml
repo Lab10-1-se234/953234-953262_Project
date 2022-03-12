@@ -2,7 +2,7 @@ version: '3.3'
 services:
   frontend:
     image: sodaop/testdeploy:latest
-    command: npm start
     ports:
       - "8081:80"
+    entrypoint: ["npm", "start"]
   
