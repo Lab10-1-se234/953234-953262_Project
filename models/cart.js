@@ -38,7 +38,7 @@ module.exports = class Cart {
      
         if (isExisting >= 0) {
             const thisprice = cart.products.find(thisprice =>thisprice.id===productId);
-            console.log(thisprice)
+          
             cart.totalPrice = cart.totalPrice-thisprice.price*thisprice.qty;
             cart.products.splice(isExisting, 1);
           

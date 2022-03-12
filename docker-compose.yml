@@ -1,13 +1,6 @@
-version: '3'
- 
+version: '3.3'
 services:
-  server: 
-    container_name: finalproduct
-    build: 
-    image: "sodaop/finalproject:latest"
+  frontend:
+    image: sodaop/testdeploy:latest
     ports:
-       - 8117:8080
-
-  
-     
-      
+      - "8081:80"

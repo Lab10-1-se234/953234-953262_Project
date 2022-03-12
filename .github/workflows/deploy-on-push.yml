@@ -2,7 +2,7 @@ name: Deploy frontend application
 'on': 
   push:
     branches:
-      - dev
+      - main
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -33,13 +33,13 @@ jobs:
         with: 
           context: .
           push: true
-          tags: sodaop/finalproject:latest
+          tags: sodaop/testdeploy:latest
       - 
         name: prepare the docker-compose run
         run: |
-              mkdir finalproject
-              cp docker-compose.yml finalproject/docker-compose.yml
-              cd finalproject
+              mkdir testdeploy
+              cp docker-compose.yml testdeploy/docker-compose.yml
+              cd testdeploy
               docker-compose -H ${{ secrets.HOST_SERVER }} down
               docker-compose -H ${{ secrets.HOST_SERVER }} pull
               docker-compose -H ${{ secrets.HOST_SERVER }} up -d

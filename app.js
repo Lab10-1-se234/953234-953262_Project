@@ -23,6 +23,6 @@ app.use((req, res, next) => {
     
 });
 
-const PORT = 8117;
-const HOST = "3.212.189.164";
-app.listen(PORT,HOST);
+const PORT = 8080;
+
+app.listen(PORT);
